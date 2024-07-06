@@ -1,0 +1,16 @@
+<section class="flex-col">
+  <h1 class="font-bold text-4xl">Home</h1>
+  <div class="mt-6">
+    <p class="border-black"> <%= render(ButtonComponent.new(text: 'Button', scheme: :primary)) %> </p>
+    <%= render(LinkButtonComponent.new(text: 'Click me!', style: 'primary')) %>  <br/>
+    <%= render(LinkButtonComponent.new(text: 'Save', style: 'success')) %> <br/>
+    <%= render(LinkButtonComponent.new(text: 'Cancel', style: 'secondary')) %>  <br/>
+  </div>
+
+  <div class="text-emerald-500 font-bold mt-6">
+    <%= render(ComponentNameComponent.new(title: "my title")) do %>
+      Component of view
+    <% end %>
+  </div>
+  <%= render(ComponentNameComponent.new(title: "my title").with_content("Content of #with_content method")) %>
+</section>
