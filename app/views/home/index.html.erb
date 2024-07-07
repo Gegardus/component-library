@@ -9,8 +9,14 @@
 
   <div class="text-emerald-500 font-bold mt-6">
     <%= render(ComponentNameComponent.new(title: "my title")) do %>
-      Component of view
+      Content of view
     <% end %>
+    <br/>
+    <%= render(ComponentNameComponent.new(title: "my title").with_content("Content of #with_content method")) %> <br/>
   </div>
-  <%= render(ComponentNameComponent.new(title: "my title").with_content("Content of #with_content method")) %>
+ 
+  <div class="font-bold mt-6">
+    <%= render(ExampleComponent.new(title: 'Example', text: 'Example text'), class: 'text-emerald-500') %>  <br/>
+    <%= render(ExampleComponent.new(title: "This is a really long title that we are testing with", text: 'Long text'))  %> 
+  </div>
 </section>
